@@ -15,6 +15,11 @@ pipeline {
                 bat 'echo "Build kalkulator sederhana di Windows"'
             }
         }
+        stage('Check Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
         stage('Unit Test') {
             steps {
                 bat 'python -m unittest discover -s tests || exit 1'
