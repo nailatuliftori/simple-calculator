@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Unit Test') {
             steps {
-                bat 'python -m unittest discover -s tests || exit 1'
+                bat 'C:\Users\ASUS\AppData\Local\Programs\Python\Python314\python.exe -m unittest discover -s tests || exit 1'
             }
         }
         stage('Build Docker Image') {
@@ -47,3 +47,4 @@ pipeline {
         }
     }
 }
+
